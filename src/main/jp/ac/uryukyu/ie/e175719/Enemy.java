@@ -26,6 +26,9 @@ public class Enemy extends LivingThing{
      * 自身へ攻撃されたときのダメージ処理をするメソッド。
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
+     * hp = hitPoint
+     * na = name
+     * de = dead
      */
 
     @Override
