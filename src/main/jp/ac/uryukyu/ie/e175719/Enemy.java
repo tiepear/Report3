@@ -27,11 +27,19 @@ public class Enemy extends LivingThing{
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
+
+    @Override
     public void wounded(int damage){
-        hitPoint -= damage;
-        if( hitPoint < 0 ) {
-            dead = true;
-            System.out.printf("モンスター%sは倒れた。\n", name);
+        int hp = getHitPoint();
+        String na = getName();
+        boolean de = getDead();
+
+        hp -= damage;
+        setHitPoint(hp);
+        if( hp < 0 ) {
+            de = true;
+            setDead(de);
+            System.out.printf("モンスター%sは倒れた。\n", na);
         }
     }
 
